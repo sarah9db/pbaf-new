@@ -1,0 +1,8 @@
+(function() {
+ const messages = JSON.parse("{\"xG/RYQ\":\"App Sandbox Editor page\",\"v/GPpw\":\"An error occurred and we couldn’t load the app’s JavaScript bundle from {0}.\\n\\nPlease check that the URL is correct and that the server is running on that address.\\n\\nIf you’re using Safari, enable HTTPS for the development server or upload your app bundle to the Developer Portal.\\n\\nIf you’re using Canva’s desktop app, we recommend switching to a web browser. Otherwise you’ll need to generate a self-signed SSL certificate or upload your app bundle to the Developer Portal.\",\"TRCV3w\":\"The clipboard API’s `write` method is not fully supported in all browsers. Use `writeText` instead for better cross-browser compatibility.\",\"taqVJQ\":\"Something went wrong on our end.\"}");
+ const cmsg = window["cmsg"] = window["cmsg"] || {};
+ const loaded = cmsg["loaded"] = cmsg["loaded"] || {};
+ loaded["1389_en"] = 1;
+ const strings = cmsg["strings"] = cmsg["strings"] || {};
+ strings["en"] = strings["en"] ? Object.assign(strings["en"], messages) : messages;
+})();
