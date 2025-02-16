@@ -1,0 +1,31 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh; /* Adjusted height for the container */
+  }
+  
+  .flashing-text-container {
+    text-align: center;
+    margin-top: -20vh; /* Adjusted negative margin to move the text higher */
+  }
+  
+  .flashing-text {
+    font-size: xx-large;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 900;
+    animation: flash 1s infinite;
+    color: red; /* Red color for the flashing text */
+  }
+  
+  @keyframes flash {
+    0%, 49.9% {
+      opacity: 1;
+      color: red; /* Red color at the start and middle of the animation */
+    }
+    50%, 100% {
+      opacity: 1;
+      color: rgb(10, 10, 0); /* Yellow color at the end of the animation */
+    }
+  }
+  

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<div class="container-fluid">
+    <div class="row justify-content-center">
+        <div class="col-12 px-xl-0 mb-0 mb-lg-3">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="#" style="text-decoration: none; color:black">Home</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Articles</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+</div>
+
+<div class="article-container">
+    <div class="row">
+    <div class="col-9">
+    <h1>{{ current_article.title }}</h1>
+    <p>{{current_article.author}}</p>
+    <img [src]="current_article.image" alt="{{ current_article.title }}" class="image-container">
+    <div [innerHTML]="current_article.content" class="col-lg-9"></div>
+    <br>
+    <button onclick="window.open('https://creativecommons.org/licenses/by/4.0/', '_blank')">Creative Commons License</button>
+    </div>
+    <div class="col-lg-3">
+        <div style="padding-bottom: 5rem;"></div>
+        <div class="container related-articles">
+          <br>
+          <h3 style="text-align: center; font-weight: bold; color:rgb(88, 88, 88)">Related Articles</h3>
+          <br>
+          <ul>
+          <li *ngFor="let related of related" style="margin-bottom: 10px; color:rgb(88, 88, 88)">
+            <a [href]="related.link" target="_blank" style="text-decoration: underline; color:rgb(88, 88, 88)">{{related.a_title}}</a>
+          </li>
+          </ul>
+            <br>
+        </div>
+    </div>
+</div>
+<!-- Comment Section -->
+<div class="comment-section">
+    <br>
+
+    <!-- List of Comments -->
+    <div class="comments-list col-7">
+      <div *ngFor="let comment of comments">
+        <div class="comment">
+          <p><strong>{{ comment.name }}</strong> - {{ comment.timestamp | date:'short' }}</p>
+          <p>{{ comment.content }}</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Comment Form -->
+    <div class="comment-form mt-4 p-4 col-10" style="border: 1px solid #ddd; border-radius: 5px; background-color: #f0f0f0;">
+      <h4>Add a Comment</h4>
+      <br>
+      <form (ngSubmit)="submitComment()">
+        <div class="form-group">
+          <label for="commentName">Name:</label>
+          <input id="commentName" [(ngModel)]="newComment.name" name="name" class="form-control" required>
+      </div>
+      <div class="form-group">
+          <label for="commentEmail">Email:</label>
+          <input id="commentEmail" [(ngModel)]="newComment.email" name="email" class="form-control" required>
+      </div>
+        <div class="form-group">
+          <textarea id="commentContent" [(ngModel)]="newComment.content" name="content" class="form-control" rows="3" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+    </div>
+  </div>
+
+</div>
+
+
+

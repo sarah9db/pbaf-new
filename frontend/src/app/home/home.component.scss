@@ -1,0 +1,135 @@
+.container{
+    display: flex;
+    flex-flow: column;
+    flex-wrap: wrap;
+}
+
+.card {
+    margin-bottom: 1.25rem;
+    margin-top: 0.625rem
+    /* Adjust margin as needed */
+}
+
+.text-smaller {
+    font-size: 0.8rem;
+    color: rgb(132, 5, 5);
+    /* Adjust font size as needed */
+}
+
+.text-smallest {
+    font-size: 0.75rem;
+    /* Adjust font size as needed */
+}
+
+.left-card {
+    flex:1;
+    margin-left: 0.625rem;
+}
+
+.custom-li {
+    min-height: 6.25rem;
+    /* Adjust height as needed */
+    display: flex;
+    font-size: 0.8rem;
+}
+.card-body-bg {
+    background-color: rgb(255, 255, 255);
+}
+.bold-text {
+    font-weight: bold;
+}
+.main-card {
+    width: 36rem;
+    height: 23.5rem;
+    margin-bottom: 1.25rem;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+
+.vertical-news {
+    margin-left:0.625rem;
+}
+.custom-li {
+    font-weight: bold;
+    position: relative;
+}
+
+.date {
+    font-weight: normal;
+    position: absolute;
+    bottom: 0.3125rem;
+    right: 0.625rem;
+    font-size: 0.9em;
+    color: rgb(66, 65, 65);
+}
+
+.left-card-2{
+    margin-left: 1.25rem;
+    margin-right:1.25rem;
+}
+
+.card-lower{
+    width: 17rem;
+    height: 13rem;
+}
+
+hr{
+    border: none;
+    height: 2px;
+    color: black; 
+    background-color: black;  
+}
+
+
+@media (max-width: 768px) {
+    .row{
+        flex-direction: column;
+    }
+
+    .left-card, .left-card-2, .vertical-news, .row-card, .early-view {
+      width: 100% !important;
+      margin-left: 0;
+      margin-right: 0;
+    }
+
+    .main-card {
+      width: 100%;
+      height: auto;
+      margin-bottom: 1.25rem;
+    }
+
+  }
+
+  @media screen and (min-width: 1025px){
+
+    div.v-row{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 799px){
+
+    div.v-row{
+        display: none;
+    }
+}
+
+@media only screen and (min-width:799px) and (max-width:1024px){
+    .vertical-news{
+        display: none ;
+    }
+}
+
+.card {
+    margin-bottom: 0.5rem; /* Adjusts the vertical gap between rows of cards */
+  }
+  
+  .col-12.col-sm-6.col-md-4.col-lg-3 {
+    padding: 0.5rem; /* Adjusts the horizontal and vertical padding around each card */
+  }
+  

@@ -1,0 +1,147 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-8 col-lg-8 col-sm-8 col-xs-12 left-card">
+            <div class="card mb-3 position-relative main-card">
+              <img [src]="main_card.image" class="card-img-top w-100" alt="happiness">
+              <div class="card-body position-absolute bottom-0 start-0">
+                    <div (click)="articlePage(main_card.unique_id)" class="card-title text-dark">{{main_card.title}}</div>
+                </div>
+            </div>
+            <div class="row">
+                <div  *ngFor="let lowerCard of lower_card" class="col-6 col-sm-6 col-xs-12 row-card">
+                    <div class="card mb-3">
+                        <img [src]="lowerCard.image" class="card-img-top" alt="...">
+                        <div class="card-body card-body-bg">
+                            <div (click)="articlePage(lowerCard.unique_id)" class="card-title text-smaller" >{{lowerCard.title}}</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12 left-card-2">
+            <div class="card mb-3" style="width: 100%;"  *ngFor="let sideCard of side_card">
+                <img [src]="sideCard.image" class="card-img-top" alt="...">
+                <div class="card-body card-body-bg">
+                    <div (click)="articlePage(sideCard.unique_id)" class="card-title text-smaller">{{sideCard.title}}</div>
+                </div>
+            </div>
+        </div>
+    
+        <div class="col-lg-2 col-md-2 col-sm-2 left-card vertical-news">
+            <div class="card" style="width: 100%;">
+                <div class="card-header" style="font-weight: bold; text-align: left;">
+                    <h4><strong>EARLY VIEW</strong></h4>
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li *ngFor="let news of latest_news_data" class="list-group-item custom-li">
+                      <div class="news-content">
+                        <a class="news-title" href="{{news.link}}" style="color:black">{{ news.latest_news }}</a>
+                        <div class="news-authors" style="font-weight:lighter;">{{ news.authors }}</div>
+                        <span class="date">{{ news.date | date:'MMMM d' }}</span>
+                    </div>
+                    </li>
+                </ul>
+                </div>
+            </div>
+        </div>
+        <div class="container mt-5">
+          <div class="row">
+            <div class="col text-center">
+              <a routerLink="/article-list" class="btn btn-grey">View All Articles</a>
+            </div>
+          </div>
+        </div>
+    <hr>
+</div>
+    <div class="container v-row">
+    <div class="row">
+        <div class="col-10 col-sm-10 col-xs-12">
+            <h3>Latest News</h3>
+            <div class="row">
+                <div class="col-3 col-md-3" style="width: 18rem;">
+                <div class="card card-lower" style="height: 19rem;">
+                    <div class="card-body">
+                      <h5 class="card-title">Arizona lawmakers have approved a budget deal that erases a $1.4 billion shortfall by curbing spending on higher education, trimming funding for state agencies and raiding a host of special funds.</h5>
+                      <h6 class="card-subtitle mb-2 text-muted"><span class="date">June 16</span></h6>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-3 col-md-3" style="width: 18rem;">
+                  <div class="card card-lower" style="height: 19rem;">
+                    <div class="card-body">
+                      <h5 class="card-title">Debt-Burdened Americans face continued financial pressure as struggles persist for lower-income groups amidst easing inflation and unchanged central bank policies.</h5>
+                      <h6 class="card-subtitle mb-2 text-muted"><span class="date">June 12</span></h6>
+                    </div>
+                  </div>
+                  </div>
+                  <div class="col-3 col-md-3" style="width: 18rem;">
+                  <div class="card card-lower" style="height: 19rem;">
+                    <div class="card-body">
+                      <h5 class="card-title">With one-third of Californians on Medicaid and payment increases for doctors still pending, the state's medical community pushes a ballot measure to force California to fulfill its commitments amid budget deficits.</h5>
+                      <h6 class="card-subtitle mb-2 text-muted"><span class="date">June 12</span></h6>
+                    </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                    <div class="col-3 col-md-3" style="width: 18rem;">
+                    <div class="card card-lower" style="height: 19rem;">
+                        <div class="card-body">
+                          <h5 class="card-title">Pakistan's new government presents ambitious first budget aiming for IMF bailout, promising salary increases and aggressive tax targets amid economic challenges.</h5>
+                          <h6 class="card-subtitle mb-2 text-muted"><span class="date">June 16</span></h6>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-3 col-md-3" style="width: 18rem;">
+                      <div class="card card-lower" style="height: 19rem;">
+                        <div class="card-body">
+                          <h5 class="card-title">Japan enacts ¥112.6 trillion budget for fiscal 2024, the second-largest, to better respond to security threats and demographic challenges, ease the pain of inflation and rebuild earthquake-hit areas.</h5>
+                          <h6 class="card-subtitle mb-2 text-muted"><span class="date">March 29</span></h6>
+                        </div>
+                      </div>
+                      </div>
+                      <div class="col-3 col-md-3" style="width: 18rem;">
+                      <div class="card card-lower" style="height: 19rem;">
+                        <div class="card-body">
+                          <h5 class="card-title">Canadian Federal Budget to shrink Public Service workforce by 5,000 over four years through attrition as part of spending refocus.</h5>
+                          <h6 class="card-subtitle mb-2 text-muted"><span class="date">April 16</span></h6>
+                        </div>
+                        </div>
+                      </div>
+            </div>
+    </div>
+</div>
+</div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <h3>MOST RECENT</h3>
+          <div class="row">
+            <div class="col-12 col-sm-6 col-md-4" *ngFor="let early_view of early_view_data">
+              <div class="card h-100">
+                <div class="card-body">
+                  <h5 class="card-title">
+                    <a href="{{early_view.link}}" class="text-danger stretched-link">{{early_view.title}}</a>
+                  </h5>
+                  <h6 class="card-subtitle mb-2 text-muted">{{early_view.author}}</h6>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+<div class="container mt-5">
+        <div class="row">
+            <div class="col text-center">
+                <blockquote class="blockquote">
+                    <p style="font-size: xx-large;">"In fact, what determines your wealth is not how much you make but how much you keep of what you make."</p>
+                    <hr style="height:2px;border-width:0;color:black;background-color:black">
+                    <footer class="blockquote-footer">David Bach</footer>
+                </blockquote>
+            </div>
+        </div>
+</div>
+
+

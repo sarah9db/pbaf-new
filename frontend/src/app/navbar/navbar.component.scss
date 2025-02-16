@@ -1,0 +1,32 @@
+.dropdown-item {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+.dropdown-menu {
+    border: 1px solid #6c757d; 
+}
+.navbar-container {
+    margin-bottom: 1.563rem; 
+  }
+  .navbar-nav .nav-item {
+    margin-right: 3.125rem; /* Adjust the margin as needed */
+}
+
+.dropdown-menu {
+    margin-top: 0.625rem; /* Adjust the top margin of dropdown menus as needed */
+}
+.navbar-with-border {
+    border-top: 3px solid black; /* Thick top border */
+    border-bottom: 3px solid black; /* Thick bottom border */
+}
+.navbar-bg-body-tertiary {
+    background-color: #bdbcbc80; /* Replace with your desired shade of grey */
+}
+
+@media screen and (max-width: 1024px) {
+  .navbar-container{
+    display: none;
+  }
+ 
+}
+
